@@ -64,7 +64,8 @@
                 }
             }
             if (listyItems.length > 9) {
-                listyItems[0].remove();
+                let randomNumber = Math.floor(Math.random() * listyItems.length);
+                listyItems[randomNumber].remove();
             }
         }
         /* add it to the container */

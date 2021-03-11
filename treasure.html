@@ -91,7 +91,13 @@
 <script>
     var ids = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"];
     var clickCount = 0;
-    var treasureLocation = 18;
+    var treasureLocation = Math.floor(Math.random() * ids.length);
+    console.log(treasureLocation);
+
+    function newGame() {
+        clickCount = 0
+        treasureLocation = Math.floor(Math.random() * ids.length);
+    }
 
     function makeGuess(x) {
         let id = "img" + ids[x];
