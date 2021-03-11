@@ -52,7 +52,21 @@
         element.innerHTML = document.getElementById("inputId").value;
         element.setAttribute("class", "listy");
         element.style.color = "orange"
+        var listyItems = document.getElementsByClassName('listy');
 
+
+        if (listyItems.length > 9) {
+            let index = 0;
+            for (var list of listyItems) {
+                if (list.innerHTML == element.innerHTML) {
+                    listyItems[index].remove();
+                    console.log(listyItems[index]);
+                }
+            }
+            if (listyItems.length > 9) {
+                listyItems[0].remove();
+            }
+        }
         /* add it to the container */
         document.getElementById('target').appendChild(element)
 
